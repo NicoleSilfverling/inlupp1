@@ -1,4 +1,5 @@
 import java.util.List;
+import java.util.Random;
 
 public class PineTree {
 
@@ -51,7 +52,11 @@ public class PineTree {
     }
 
     public boolean fall(int height, int age, int earthquake){
-        return true;
+        if (age > 600 && height > 30 && earthquake > 3){
+            Random random = new Random();
+            return random.nextInt(6) >= 4;
+        }
+        return false;
     }
 
     static class PineCone{

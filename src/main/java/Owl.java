@@ -63,8 +63,8 @@ public class Owl {
 
     public boolean eat(PineTree pineTree){
         Random random = new Random();
-        int squirrelSpeed = random.nextInt(10);
-        int owlSpeed = random.nextInt(10);
+        int squirrelSpeed = random.nextInt(11);
+        int owlSpeed = random.nextInt(11);
         return hungry && owlSpeed > squirrelSpeed;
     }
 }
