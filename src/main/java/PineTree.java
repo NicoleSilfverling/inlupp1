@@ -8,11 +8,14 @@ public class PineTree {
 
     private Owl owl;
 
+    private int age;
+
     //constructor
-    public PineTree(int numOfCones, List<Squirrel> squirrels, Owl owl) {
+    public PineTree(int numOfCones, List<Squirrel> squirrels, Owl owl, int age) {
         this.numOfCones = numOfCones;
         this.squirrels = squirrels;
         this.owl = owl;
+        this.age = age;
     }
 
     public int getNumOfCones() {
@@ -39,8 +42,15 @@ public class PineTree {
         this.owl = owl;
     }
 
+    public int getAge() {
+        return age;
+    }
 
-    public boolean fall(int height, int age, int windSpeed){
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public boolean fall(int height, int age, int earthquake){
         return true;
 
     }
