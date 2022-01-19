@@ -8,12 +8,15 @@ public class Squirrel {
 
     private String name;
 
+    private boolean hungry;
+
     //constructor
-    public Squirrel(int weight, int numOfConesInNest, int age, String name) {
+    public Squirrel(int weight, int numOfConesInNest, int age, String name, boolean hungry) {
         this.weight = weight;
         this.numOfConesInNest = numOfConesInNest;
         this.age = age;
         this.name = name;
+        this.hungry = hungry;
     }
 
     public int getWeight() {
@@ -48,7 +51,19 @@ public class Squirrel {
         this.name = name;
     }
 
-    public boolean eat(){
-        return true;
+    public boolean isHungry() {
+        return hungry;
+    }
+
+    public void setHungry(boolean hungry) {
+        this.hungry = hungry;
+    }
+
+    public boolean eat(PineTree pineTree){
+        if(hungry && (numOfConesInNest > 0 || pineTree.getNumOfCones() > 0)){
+            setWeight(getWeight() + 100);
+            return true;
+        }
+        return false;
     }
 }

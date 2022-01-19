@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Owl {
 
     private int wingSpan;
@@ -48,7 +50,10 @@ public class Owl {
         this.name = name;
     }
 
-    public boolean eat(){
-        return true;
+    public boolean eat(PineTree pineTree){
+        Random random = new Random();
+        int squirrelSpeed = random.nextInt(10);
+        int owlSpeed = random.nextInt(10);
+        return hungry && owlSpeed > squirrelSpeed;
     }
 }
