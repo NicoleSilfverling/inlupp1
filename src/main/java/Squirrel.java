@@ -19,12 +19,19 @@ public class Squirrel {
         this.hungry = hungry;
     }
 
+    private static final int DEFAULT_WEIGHT = 300;
+
+
     public int getWeight() {
         return weight;
     }
 
     public void setWeight(int weight) {
-        this.weight = weight;
+        if (weight >= 200 && weight <= 450) {
+            this.weight = weight;
+        }else {
+            this.weight = DEFAULT_WEIGHT;
+        }
     }
 
     public int getNumOfConesInNest() {
@@ -61,7 +68,7 @@ public class Squirrel {
 
     public boolean eat(PineTree pineTree){
         if(hungry && (numOfConesInNest > 0 || pineTree.getNumOfCones() > 0)){
-            setWeight(getWeight() + 100);
+            setWeight(getWeight() + 10);
             return true;
         }
         return false;

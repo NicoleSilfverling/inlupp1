@@ -18,12 +18,19 @@ public class Owl {
         this.name = name;
     }
 
+    private static final int DEFAULT_WINGSPAN = 90;
+    private static final int DEFAULT_WEIGHT = 3000;
+
     public int getWingSpan() {
         return wingSpan;
     }
 
     public void setWingSpan(int wingSpan) {
-        this.wingSpan = wingSpan;
+        if(wingSpan >=75 && wingSpan <= 110) {
+            this.wingSpan = wingSpan;
+        }else{
+            this.wingSpan = DEFAULT_WINGSPAN;
+        }
     }
 
     public boolean isHungry() {
@@ -39,7 +46,11 @@ public class Owl {
     }
 
     public void setWeight(double weight) {
-        this.weight = weight;
+        if (weight >= 2000 && weight <= 4000) {
+            this.weight = weight;
+        }else {
+            this.weight = DEFAULT_WEIGHT;
+        }
     }
 
     public String getName() {
