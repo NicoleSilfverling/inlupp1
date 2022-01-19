@@ -16,12 +16,10 @@ public class Main {
 
 
 
-        boolean owlHasEaten = owl.eat(pineTree);
-
         System.out.println(owl.eat(pineTree) ? owl.getName() + " the owl ate a stolen cone from a squirrel" : "The squirrel was too fast, no food for " + owl.getName());
 
-        System.out.println(pineTree.fall(40, 700, 5) ? "The tree fell" : "The tree survived");
 
+        System.out.println(pineTree.fall(40, 700, 5) ? "The tree fell" : "The tree survived");
 
 
 
