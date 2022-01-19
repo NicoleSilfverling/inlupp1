@@ -52,6 +52,9 @@ public class PineTree {
 
     public boolean fall(int height, int age, int earthquake){
         return true;
+    }
+
+    static class PineCone{
 
     }
 }
