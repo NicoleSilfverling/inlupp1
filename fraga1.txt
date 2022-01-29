@@ -1,0 +1,3 @@
+1. Varför är romberna i Squirrel och Owls pilspetsar genomskinliga?
+Romberna är genomskinliga för att relationen är av typen aggregation.
+Svarta romber är av typen composition och innebär att child-objektet är beroende av parent-objektet, vilket inte är fallet här.
